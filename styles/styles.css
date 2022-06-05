@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+main > div > i {
+  font-size: 70px;
+  color: #fef907;
+  filter: drop-shadow(12px 6px 2px rgb(105, 34, 34));
+  transition: 0.4s ease;
+}
+
+main > div > i:hover {
+  transform: scale(0.8);
+}
+main > div > h1 {
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+main > div > h1 > span {
+  color: #fef907;
+}
+
+main::before {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #cd1b1e;
+  z-index: -1;
+}
+
+#food {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  width: 300px;
+  margin: auto;
+  text-align: left;
+  padding: 20px;
+  color: white;
+  transition: 0.5s ease;
+}
+
+#food > input {
+  width: 16px;
+  height: 16px;
+  margin: 4px;
+  cursor: pointer;
+}
+
+#btn {
+  color: #fef907;
+  background-color: transparent;
+  outline: none;
+  font-size: 16px;
+  margin-top: 14px;
+  border: none;
+  width: 100%;
+  padding: 4px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 0.2s ease;
+}
+
+#btn:active {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transform: translateY(4px) scale(0.9);
+}
+
+main > .success {
+  color: #fef907;
+  width: 320px;
+  margin: auto;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  transform: scale(0);
+  transition: 0.5s ease;
+}
+
+main > .items {
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  color: #fff;
+  height: fit-content;
+  padding: 20px;
+  transform: scale(0);
+  transition: 0.5s ease;
+}
+
+main > .items > div {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+main > .items > div > img {
+  width: 200px;
+  height: 150px;
+}
+
+main > .items > div > p {
+  padding: 10px;
+}
+main > .reject {
+  color: #fff;
+  transform: scale(0);
+  margin-bottom: 10px;
+  transition: 0.5s ease;
+}
+main > .reject > div {
+  margin: auto;
+}
+main > .reject > div > img {
+  width: 40%;
+}
+marquee {
+  color: #fef907;
+}
+
+@media all and (min-width: 50px) and (max-width: 750px) {
+  main > .items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  main > div > h1,
+  main > div > h2 {
+    font-size: 20px;
+  }
+
+  main > div > i {
+    font-size: 44px;
+  }
+  main > .reject > div > img {
+    width: 80%;
+  }
+}
